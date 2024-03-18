@@ -439,7 +439,7 @@ def show_paths(w, x_offset, y_offset, x_range, y_range, indices_per_int, file_nu
 #track_global_indices_SLAM(165.5, 40, 40, 80, 80, 4, 20, 100, 0.01, min_max_cap=10, averaging=10)
 #show_paths(165.5, 40, 40, 80, 80, 4, 20, 10, 0.015, min_max_cap=100, averaging=20)
 #for width in [160, 165.5, 170]:
-data_path = "../Data/ECE5242Proj3-train/"
+data_path = "data/"
 width = 165.5
 #show_paths(width, 45, 45, 90, 90, 4, 20, 50, 0.001)
 for filenum in [20, 21, 23]:

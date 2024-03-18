@@ -1,0 +1,43 @@
+Suggestions:
+
+1. Please look at the data set and configuration files carefully
+
+load_data.py : This file is an interface for loading the data in Python.
+
+test_load_data.py : You can test util files with this test file. It will visualize the lidar data for you as well.
+
+docs/platform_config.pdf : In this file, you can see the configuration of the robot.
+
+
+Encoders.mat : it has timestamp and values(4 channel count data, please look at platform_config.pdf)
+
+Hokuyo.mat : lidar scan data (please look at load_data.py)
+
+imu.mat : This has acceleration and angular velocity (please look at load_data.py)
+
+2. Try dead-reckoning with encoder data and plot the robot trajectory
+
+
+3. Try mapping from the first scan and plot the map
+
+
+4. Try occupancy grid map and update the map with new scan data
+
+
+5. Try prediction only and plot the robot trajectories (100 for N=100 particles) 
+
+
+6. Try the update step with only 3-4 particles and see if the weight update makes sense
+
+
+7. MapUtils 
+
+getMapCellsFromRay is a function with an implementation of the bresenham algorithm to get the map cells between the robot and the lidar scan hit from scan data. IE: computes which cells are "misses" (not hits).
+
+8. MapUtilsCython 
+
+Since the naive python code of getMapCellsFromRay is very slow, we also provide Cython code for speed.
+
+Please try mapping with naive MapUtils and then please try MapUtilsCython when you need the speed-up.
+
+Please read "readme.txt" in MapUtilsCython folder for how to compile the Cython code
