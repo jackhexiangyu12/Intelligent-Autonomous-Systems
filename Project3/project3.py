@@ -114,23 +114,24 @@ def show_paths(w, x_offset, y_offset, x_range, y_range, indices_per_int, file_nu
 
 
 # for abc in range(155, 165):
-# for x in range(162, 168):
-# track_global_movement(fr, fl, lidar[:len(ts)], 165.5)
-# track_global_indices(165.5, 10, 10, 40, 40, 6, 20)
-# track_global_indices(165.5, 15, 15, 45, 50, 6, 21)
-# track_global_indices(165.5, 10, 35, 40, 55, 6, 23)
+#     for x in range(162, 168):
+#         track_global_movement(fr, fl, lidar[:len(ts)], 165.5)
+#         track_global_indices(165.5, 10, 10, 40, 40, 6, 20)
+#         track_global_indices(165.5, 15, 15, 45, 50, 6, 21)
+#         track_global_indices(165.5, 10, 35, 40, 55, 6, 23)
 
-# track_global_indices_SLAM(165.5, 40, 40, 80, 80, 4, 20, 100, 0.01, min_max_cap=10, averaging=10)
-# show_paths(165.5, 40, 40, 80, 80, 4, 20, 10, 0.015, min_max_cap=100, averaging=20)
-# for width in [160, 165.5, 170]:
-data_path = "data/"
-width = 165.5
-# show_paths(width, 45, 45, 90, 90, 4, 20, 50, 0.001)
+
+show_paths(165.5, 40, 40, 80, 80, 4, 20, 10, 0.015, min_max_cap=100, averaging=20)
+
+for width in [160, 165.5, 170]:
+    data_path = "data/"
+    # width = 165.5
+    show_paths(width, 45, 45, 90, 90, 4, 20, 50, 0.001)
+
 for filenum in [20, 21, 23]:
     for thresh in [0]:
         for angle in [0.001]:
             for min_max in [25]:  # check smaller?
                 for sub in [0.4]:  # [0.3,0.4,0.5]: # check smaller?
-                    track_global_indices_SLAM(width, 45, 45, 90, 90, 4, filenum, data_path, 50, angle, thresh, sub,
-                                              min_max_cap=min_max, averaging=4, testing=True)
+                    show_paths(width, 45, 45, 90, 90, 4, filenum, 50, 0.001, min_max_cap=100, averaging=20)
 
