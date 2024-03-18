@@ -478,10 +478,4 @@ for filenum in [20, 21, 23]:
                 for sub in [0.4]:  # [0.3,0.4,0.5]: # check smaller?
                     track_global_indices_SLAM(width, 45, 45, 90, 90, 4, filenum, data_path, 50, angle, thresh, sub,
                                               min_max_cap=min_max, averaging=4, testing=True)
-# import os
-# print(len(os.listdir('results/')))
-# for file in os.listdir('results/'):
-#     if '_1.' in file:
-#         os.remove("results/" + file)
 
-# print(len(os.listdir('results/')))
