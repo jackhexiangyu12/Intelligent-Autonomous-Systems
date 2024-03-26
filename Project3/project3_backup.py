@@ -476,8 +476,10 @@ for filenum in [20, 21, 23]:
         for angle in [0.001]:
             for min_max in [25]:  # check smaller?
                 for sub in [0.4]:  # [0.3,0.4,0.5]: # check smaller?
+                    # track_global_indices_SLAM(width, 45, 45, 90, 90, 4, filenum, data_path, 50, angle, thresh, sub,
+                    #                           min_max_cap=min_max, averaging=4, testing=True)
                     track_global_indices_SLAM(width, 45, 45, 90, 90, 4, filenum, data_path, 50, angle, thresh, sub,
-                                              min_max_cap=min_max, averaging=4, testing=True)
+                                              min_max_cap=min_max, averaging=4, testing=False)
 # import os
 # print(len(os.listdir('results/')))
 # for file in os.listdir('results/'):
