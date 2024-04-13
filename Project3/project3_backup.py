@@ -71,7 +71,7 @@ def SLAM(w, x_o, y_o, x_r, y_r, ind, f_n, d_p, p, m_n, u_t, s, min=1000, avg=1, 
             indices[best_gaps[:, 0], best_gaps[:, 1]] -= s
         indices = np.clip(indices, -min, min)
     if t:
-        filename = "results/output" + str(f_n)
+        filename = "res/o" + str(f_n)
         print(filename)
         plt.figure()
         xmin, xmax, ymin, ymax = 0, -1, 0, -1
@@ -88,7 +88,7 @@ def SLAM(w, x_o, y_o, x_r, y_r, ind, f_n, d_p, p, m_n, u_t, s, min=1000, avg=1, 
             plt.savefig(filename)
         plt.show()
     else:
-        filename1 = "results/SLAM_img" + str(f_n) + "_" + str(int(10 * w)) + "_" + str(
+        filename1 = "res/SLAM_" + str(f_n) + "_" + str(int(10 * w)) + "_" + str(
             min) + "_" + str(int(10 * s)) + "_" + str(np.abs(u_t)) + "_" + str(
             int(1000 * m_n))
         print(filename1)
